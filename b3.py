@@ -47,10 +47,10 @@ while True:
             phone = phone.replace("-", "")
             department = employee_info[3].strip().upper()
 
-            if "a" in phone or "b" in phone or "c" in phone:
-                phone = "Invalid Format"
-            else:
+            if phone.isdigit():
                 phone = "******" + phone[-4:]
+            else:
+                phone = "Invalid Format"
 
             print(f"{emp_id} {full_name} {phone} {department}")
 
